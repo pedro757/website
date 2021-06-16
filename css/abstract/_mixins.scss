@@ -1,0 +1,28 @@
+@use 'colors' as *;
+
+@mixin AbsolutePositioning($top: 0, $left: 0, $right: 0, $bottom: 0, $z-index: 1, $margin: auto) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+  margin: $margin;
+}
+
+@mixin Flexbox($direction: row, $justify: normal, $align: normal) {
+  display: flex;
+  @if $justify != normal {
+    justify-content: $justify;
+  }
+  @if $direction != row {
+    flex-direction: $direction;
+  }
+  @if $align != normal {
+    align-items: $align;
+  }
+}
+@mixin Stroke($Color: $gray2) {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $Color;
+}

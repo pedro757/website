@@ -1,0 +1,76 @@
+@use '../abstract/variables' as *;
+@use '../abstract/mixins' as *;
+
+.Hero {
+  @include Flexbox;
+}
+
+.MainColumn {
+  @include Flexbox(column);
+  flex: 2 0 auto;
+  padding: 3.8rem;
+}
+
+.MainParagraph {
+  margin: 2rem 0;
+  width: 45ch;
+}
+
+.MainContent {
+  @include Flexbox(column, center, center);
+  flex: 1 0 auto;
+  font-family: $Serif;
+  & > h2 {
+    line-height: 7.5rem;
+  }
+}
+
+.Name {
+  font-weight: 400;
+}
+
+.Break {
+  font-family: Poppins;
+  font-size: 1.6rem;
+  border-top: .1rem solid rgba(72,72,72,0.30);
+  width: 45ch;
+  margin-top: 1rem;
+}
+
+.SecColumn {
+  @include Flexbox(column, center, center);
+  padding: $Marco;
+  flex: 1 0 auto;
+  position: relative;
+  overflow: hidden;
+  & > h1 {
+    line-height: 8rem;
+    font-family: $Serif;
+    @include Stroke;
+  }
+}
+
+.Photo {
+  @include AbsolutePositioning;
+  width: 44rem;
+  height: 62rem;
+  background-color: #c4c4c4;
+}
+
+.PhotoData {
+  @include AbsolutePositioning($top: 35rem, $right: 20rem, $z-index: 2);
+  width: 38rem;
+  height: 12rem;
+  background-color: #fff;
+}
+
+.RightBar {
+  @include Flexbox(column, flex-end, center);
+  flex: 0 0 auto;
+  padding: $Marco;
+}
+
+.Scroll {
+  flex: 1 0 auto;
+  justify-content: flex-end;
+}
