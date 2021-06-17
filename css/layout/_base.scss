@@ -1,3 +1,6 @@
+@use '../abstract/colors';
+@use '../abstract/variables';
+
 :root {
   font-size: 62.5%;
   font-family: Poppins,Cormorant;
@@ -6,7 +9,7 @@
 * {
   margin: 0;
   padding: 0;
-  color: #484848;
+  color: colors.$text;
 }
 
 ::-webkit-scrollbar {
@@ -15,27 +18,26 @@
 
 ::-webkit-scrollbar-track {
   /* border-radius: auto; */
-  background: #f1f1f1;
+  background: colors.$ScrollTrack;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #c8c8c8;
+  background: colors.$ScrollThumb;
   border-radius: 1rem
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #a1a1a1;
+  background: colors.$ScrollThumbHover;
 }
 
 section {
-  background-color: #f9f9f9;
   height: min(100vh);
   width: 100%;
 }
 
 p {
   font-size: 1.6rem;
-  font-family: Poppins Light;
+  font-family: variables.$SansLight;
   text-align: justify;
 }
 

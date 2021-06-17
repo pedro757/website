@@ -1,4 +1,4 @@
-@use 'colors' as *;
+@use 'colors';
 
 @mixin AbsolutePositioning($top: 0, $left: 0, $right: 0, $bottom: 0, $z-index: 1, $margin: auto) {
   position: absolute;
@@ -21,8 +21,8 @@
     align-items: $align;
   }
 }
-@mixin Stroke($Color: $gray2) {
+@mixin Stroke($StrokeColor: colors.$gray2) {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: $Color;
+  -webkit-text-stroke-color: $StrokeColor;
 }

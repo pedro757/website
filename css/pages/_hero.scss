@@ -1,8 +1,10 @@
 @use '../abstract/variables' as *;
 @use '../abstract/mixins' as *;
+@use '../abstract/colors';
 
 .Hero {
   @include Flexbox;
+  background-color: colors.$graybg;
 }
 
 .MainColumn {
