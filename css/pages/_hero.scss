@@ -3,7 +3,7 @@
 
 .Hero {
   @include Flexbox;
-  width: calc(100% - #{$Marco * 2})
+  width: calc(100% - #{$Marco * 3})
 }
 
 .MainColumn {
@@ -63,19 +63,4 @@
   width: 38rem;
   height: 12rem;
   background-color: #fff;
-}
-
-.RightBar {
-  @include Flexbox(column, flex-end, center);
-  padding: $Marco;
-  height: calc(100% - #{$Marco * 2});
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 2;
-}
-
-.Scroll {
-  flex: 1 0 auto;
-  justify-content: flex-end;
 }
