@@ -1,6 +1,5 @@
 @use '../abstract/colors';
-@use '../abstract/mixins' as *;
-@use '../abstract/variables' as *;
+@use '../abstract' as *;
 
 .IntroProjects {
   @include Flexbox;
