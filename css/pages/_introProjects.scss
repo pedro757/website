@@ -1,0 +1,30 @@
+@use '../abstract/colors';
+@use '../abstract/mixins' as *;
+@use '../abstract/variables' as *;
+
+.IntroProjects {
+  @include Flexbox;
+  position: relative;
+}
+
+.IntroColumn {
+  @include Flexbox(column);
+  width: calc(100% - #{$Marco * 2});
+  flex: 1 0 auto;
+  padding: $Marco;
+}
+
+.IntroContent {
+  @include Flexbox(column);
+  flex: 1 0 auto;
+  font-family: $Serif;
+  line-height: 8rem;
+  justify-content: space-evenly;
+}
+
+.Projects {
+  @include Positioning($right: $Marco, $margin: 0, $pos: relative);
+  height: 32rem;
+  width: calc(100% + #{$Marco * 2});
+  background-color: colors.$gray3;
+}
