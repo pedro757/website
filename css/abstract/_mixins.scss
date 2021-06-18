@@ -1,12 +1,25 @@
 @use 'colors';
 
-@mixin AbsolutePositioning($top: 0, $left: 0, $right: 0, $bottom: 0, $z-index: 1, $margin: auto) {
-  position: absolute;
-  top: $top;
-  left: $left;
-  right: $right;
-  bottom: $bottom;
-  margin: $margin;
+@mixin Positioning($top: auto, $left: auto, $right: auto, $bottom: auto, $z-index: 1, $margin: 0, $pos: absolute) {
+  position: $pos;
+  @if $top != auto {
+    top: $top;
+  }
+  @if $left != auto {
+    left: $left;
+  }
+  @if $right != auto {
+    right: $right;
+  }
+  @if $bottom != auto {
+    bottom: $bottom;
+  }
+  @if $margin != 0 {
+    margin: $margin;
+  }
+  @if $z-index != auto {
+    z-index: $z-index;
+  }
 }
 
 @mixin Flexbox($direction: row, $justify: normal, $align: normal) {

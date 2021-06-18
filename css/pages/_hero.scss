@@ -53,14 +53,14 @@
 }
 
 .Photo {
-  @include AbsolutePositioning;
+  @include Positioning(0,0,0,0, $z-index:1, $margin:auto);
   width: 44rem;
   height: 62rem;
   background-color: #c4c4c4;
 }
 
 .PhotoData {
-  @include AbsolutePositioning($top: 35rem, $right: 20rem, $z-index: 2);
+  @include Positioning(35rem,0,20rem,0, $z-index: 2, $margin:auto);
   width: 38rem;
   height: 12rem;
   background-color: #fff;
