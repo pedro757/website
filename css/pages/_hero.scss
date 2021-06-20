@@ -21,8 +21,8 @@
   @include Flexbox(column, center, center);
   flex: 1 0 auto;
   font-family: $Serif;
-  & > h2 {
-    line-height: 7.5rem;
+  & > div > h2 {
+    line-height: 0.90;
   }
 }
 
@@ -45,7 +45,7 @@
   position: relative;
   overflow: hidden;
   & > h1 {
-    line-height: 8rem;
+    line-height: 0.82;
     font-family: $Serif;
     @include Stroke;
   }

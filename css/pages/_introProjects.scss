@@ -16,9 +16,9 @@
 .IntroContent {
   @include Flexbox(column);
   flex: 1 0 auto;
-  & > h1 {
+  & > h2 {
     font-family: $Serif;
-    line-height: 8rem;
+    line-height: 0.90;
   }
   justify-content: space-evenly;
 }
