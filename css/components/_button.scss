@@ -1,16 +1,16 @@
-@use '../abstract/mixins' as *;
+@use '../abstract' as *;
 
 .Button {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: $StdGap;
   user-select: none;
   font-weight: 600;
 }
 
 .ButtonMenu {
   @include Flexbox($align: center);
-  gap: 2rem;
+  gap: $StdGap;
   writing-mode: vertical-lr;
   text-orientation: sideways;
   & > h3 {

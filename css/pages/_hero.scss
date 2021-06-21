@@ -13,15 +13,19 @@
 }
 
 .MainParagraph {
-  margin: 2rem 0;
   width: 45ch;
 }
 
-.MainContent {
+.MainContentContainer {
   @include Flexbox(column, center, center);
   flex: 1 0 auto;
   font-family: $Serif;
-  & > div > h2 {
+}
+
+.MainContent {
+  @include Flexbox(column);
+  gap: $StdGap;
+  & > h2 {
     line-height: 0.90;
   }
 }
@@ -35,7 +39,6 @@
   font-size: 1.3rem;
   border-top: .1rem solid rgba(72,72,72,0.30);
   width: 44ch;
-  margin-top: 2rem;
 }
 
 .SecColumn {
