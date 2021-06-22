@@ -1,0 +1,23 @@
+@use '../abstract' as *;
+
+.imgPreview {
+  background-color: #c4c4c4;
+  height: 12rem;
+  width: 20rem;
+}
+
+.CardContainer {
+  padding: $Marco;
+  display: grid;
+  gap: 5rem;
+}
+
+.Card {
+  @include Flexbox(column);
+  gap: 2.5rem;
+  color: #808080;
+  & > p {
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+}
