@@ -19,3 +19,32 @@ document.addEventListener("mousemove", (event) => {
   Photo.style.transform = `translate(${cursorPhoto.x}px, ${cursorPhoto.y}px)`;
   PhotoData.style.transform = `translate(${cursorPhotoData.x}px, ${cursorPhotoData.y}px)`;
 });
+
+let Title = CSSRulePlugin.getRule(".title::after");
+let MainParagraph = CSSRulePlugin.getRule(".MainParagraph::after");
+let HeroTl = gsap.timeline({ defaults: { duration: 2 } });
+
+HeroTl.from(".MainContent", {
+  y: -50,
+  opacity: 0,
+  ease: "Power1.easeOut",
+})
+  .to(
+    [Title, MainParagraph],
+    {
+      cssRule: {
+        scaleY: 0,
+      },
+      duration: 1.8,
+      ease: "Power1.easeOut",
+    },
+    "<"
+  )
+  .from(
+    ".Break",
+    {
+      opacity: 0,
+      ease: "Power1.easeOut",
+    },
+    "<"
+  );

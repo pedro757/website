@@ -14,6 +14,11 @@
 
 .MainParagraph {
   width: 45ch;
+  position: relative;
+  display: block;
+  &::after {
+    @include reveal(0 100%);
+  }
 }
 
 .MainContentContainer {
@@ -25,8 +30,14 @@
 .MainContent {
   @include Flexbox(column);
   gap: $StdGap;
-  & > h2 {
-    line-height: 0.90;
+}
+
+.title {
+  line-height: 0.90;
+  display: block;
+  position: relative;
+  &::after {
+    @include reveal;
   }
 }
 

@@ -39,3 +39,15 @@
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: $StrokeColor;
 }
+
+@mixin reveal($transformOrigin: 100% 0){
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  transform-origin: $transformOrigin;
+  background-color: colors.$graybg;
+}
