@@ -87,12 +87,14 @@
   .MainColumn {
     padding-top: $Marco;
     height: 75vh;
+    padding-bottom: 0;
   }
   .MainParagraph, .Break {
     width: 100%;
   }
   .SecColumn {
     overflow: visible;
+    padding-bottom: 0;
     & .Photo {
       position: relative;
       width: 100vw;
