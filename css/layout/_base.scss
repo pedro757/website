@@ -1,11 +1,11 @@
-@use '../abstract/colors';
-@use '../abstract/variables';
+@use '../abstract' as *;
 
 :root {
   font-size: 62.5%;
   font-family: Poppins,Cormorant;
-  background-color: colors.$graybg;
-  color: colors.$text;
+  background-color: $graybg;
+  color: $text;
+  --marco: #{$Marco};
 }
 body {
   width: 100vw;
@@ -15,32 +15,11 @@ body {
 .container {
   width: 100%;
   height: 100%;
-  scroll-snap-type: both mandatory;
-  overflow-y: scroll;
-
 }
 
 * {
   margin: 0;
   padding: 0;
-}
-
-::-webkit-scrollbar {
-  width: 1rem;
-}
-
-::-webkit-scrollbar-track {
-  /* border-radius: auto; */
-  background: colors.$ScrollTrack;
-}
-
-::-webkit-scrollbar-thumb {
-  background: colors.$ScrollThumb;
-  border-radius: 1rem
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: colors.$ScrollThumbHover;
 }
 
 section {
@@ -51,7 +30,7 @@ section {
 
 p {
   font-size: 1.3rem;
-  font-family: variables.$SansLight;
+  font-family: $SansLight;
   text-align: justify;
 }
 
@@ -67,4 +46,40 @@ h2 {
 h3 {
   user-select: none;
   font-size: 1.3rem;
+}
+
+@media (max-width: 43rem) {
+  :root {
+    --marco: 2rem;
+  }
+  h2 {
+    font-size: 6rem;
+  }
+  section {
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 77rem) {
+  .container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+  }
+  ::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    /* border-radius: auto; */
+    background: $ScrollTrack;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $ScrollThumb;
+    border-radius: 1rem
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: $ScrollThumbHover;
+  }
 }

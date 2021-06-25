@@ -3,13 +3,13 @@
 
 .Hero {
   @include Flexbox;
-  width: calc(100% - #{$Marco * 2.6})
+  width: calc(100% - var(--marco) * 2.6);
 }
 
 .MainColumn {
   @include Flexbox(column);
   flex: 2 0 auto;
-  padding: $Marco;
+  padding: var(--marco);
 }
 
 .MainParagraph {
@@ -54,7 +54,7 @@
 
 .SecColumn {
   @include Flexbox(column, center, center);
-  padding: $Marco;
+  padding: var(--marco);
   flex: 1 0 auto;
   position: relative;
   overflow: hidden;
@@ -77,4 +77,35 @@
   width: 32rem;
   height: 10rem;
   background-color: #fff;
+}
+
+@media (max-width: 42.5rem) {
+  .Hero {
+    flex-direction: column;
+    width: 100%;
+  }
+  .MainColumn {
+    padding-top: $Marco;
+    height: 75vh;
+  }
+  .MainParagraph, .Break {
+    width: 100%;
+  }
+  .SecColumn {
+    overflow: visible;
+    & .Photo {
+      position: relative;
+      width: 100vw;
+      right: calc(var(--marco));
+      left: auto;
+    }
+    & .PhotoData {
+      left:0;
+      right: 0;
+      width: calc(100vw - var(--marco) * 2);
+    }
+    & > h1 {
+      display: none;
+    }
+  }
 }

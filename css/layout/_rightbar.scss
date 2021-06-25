@@ -14,3 +14,9 @@
   flex: 1 0 auto;
   justify-content: flex-end;
 }
+@media (max-width: 42.5rem) {
+  .RightBar {
+    padding: var(--marco);
+    padding-top: $Marco;
+  }
+}
