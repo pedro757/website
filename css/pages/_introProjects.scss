@@ -1,4 +1,3 @@
-@use '../abstract/colors';
 @use '../abstract' as *;
 
 .IntroProjects {
@@ -8,9 +7,9 @@
 
 .IntroColumn {
   @include Flexbox(column);
-  width: calc(100% - #{$Marco * 2});
+  width: calc(100% - var(--marco) * 2);
   flex: 1 0 auto;
-  padding: $Marco;
+  padding: var(--marco);
 }
 
 .IntroContent {
@@ -24,8 +23,17 @@
 }
 
 .Projects {
-  @include Positioning($right: $Marco, $margin: 0, $pos: relative);
+  @include Positioning($right: var(--marco), $margin: 0, $pos: relative);
   height: 32rem;
-  width: calc(100% + #{$Marco * 2});
-  background-color: colors.$gray3;
+  width: calc(100% + var(--marco) * 2);
+  background-color: $gray3;
+}
+
+@media (max-width: 42.5rem) {
+  .IntroColumn {
+    height: 100vh;
+    & > h3:first-child {
+      display: none;
+    }
+  }
 }
