@@ -1,5 +1,6 @@
 // Photo movement animation
 let isDesktop = window.matchMedia("(min-width: 77rem)");
+let isMobile = window.matchMedia("(max-width: 42.5rem)");
 
 function MouseMoveAnimation(isDesktop) {
   if (!isDesktop.matches) return;
@@ -69,6 +70,14 @@ function HeroTimeline() {
       [Button, Name],
       {
         x: -50,
+        opacity: 0,
+      },
+      "<"
+    )
+    .from(
+      ".Photo",
+      {
+        y: isMobile.matches ? 50 : 0,
         opacity: 0,
       },
       "<"
