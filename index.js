@@ -30,6 +30,8 @@ function HeroTimeline() {
   let Title = CSSRulePlugin.getRule(".title::after");
   let MainParagraph = CSSRulePlugin.getRule(".MainParagraph::after");
   let HeroTl = gsap.timeline({ defaults: { duration: 2 } });
+  let Button = document.querySelector(".MainColumn > .Button");
+  let Name = document.querySelector(".MainColumn > .Name");
 
   HeroTl.from(".MainContent", {
     y: -50,
@@ -52,6 +54,22 @@ function HeroTimeline() {
       {
         opacity: 0,
         ease: "Power1.easeOut",
+      },
+      "<"
+    )
+    .from(
+      ".RightBar",
+      {
+        opacity: 0,
+        x: +50,
+      },
+      "<"
+    )
+    .from(
+      [Button, Name],
+      {
+        x: -50,
+        opacity: 0,
       },
       "<"
     );

@@ -3,7 +3,7 @@
 .RightBar {
   @include Flexbox(column, flex-end, center);
   padding: $Marco;
-  height: calc(100% - #{$Marco * 2});
+  height: calc(100% - var(--marco) * 2);
   position: fixed;
   top: 0;
   right: 0;
@@ -18,5 +18,7 @@
   .RightBar {
     padding: var(--marco);
     padding-top: $Marco;
+    padding-bottom: $Marco;
+    height: calc(100% - #{$Marco * 2});
   }
 }
