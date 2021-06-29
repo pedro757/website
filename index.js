@@ -45,7 +45,7 @@ function HeroTimeline() {
         cssRule: {
           scaleY: 0,
         },
-        duration: 1.8,
+        duration: 1.5,
         ease: "Power1.easeOut",
       },
       "<"
@@ -75,7 +75,7 @@ function HeroTimeline() {
       "<"
     )
     .from(
-      ".Photo",
+      [".Photo", ".SecColumn > h1"],
       {
         y: isMobile.matches ? 50 : 0,
         opacity: 0,
