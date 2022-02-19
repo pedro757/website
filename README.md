@@ -3,6 +3,11 @@
 This is my portfolio, I'm making this readme to show the steps I've taken to
 create it.
 
+# Description
+
+I'm using plain HTML and javacript also SCSS preprocessor to make the css code maintainable, with the help of GSAP
+library I'm capable to add cool animations and fun stuff to the website.
+
 ## The UI/UX Desing
 
 This project is based on the figma, So i'm using figma to create a prototype first and then bring all my ideas to
