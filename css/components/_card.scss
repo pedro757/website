@@ -10,6 +10,7 @@
   padding: $Marco;
   display: grid;
   gap: 5rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
 
 .Card {
